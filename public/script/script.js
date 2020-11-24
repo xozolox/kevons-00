@@ -30,9 +30,29 @@ closeCart.addEventListener('click', () => {
   openCart.classList.toggle('open-carrito');
   if(openCart.classList.contains('open-carrito')) {
   } else {
-    openCart.style.transform = 'translate(-100%, 0)'
+    openCart.style.transform = 'translate(-100%, 0)';
   }
 })
+
+const openPasarela = document.querySelector('.open-pasarela');
+openPasarela.addEventListener('click', () => {
+  const openPago = document.querySelector('#box-pasarela-pago');
+  openPago.classList.toggle('open-pago');
+  if (openPago.classList.contains('open-pago')) {
+    openPago.style.transform = 'translate(0, 0)';
+    openPago.style.transition = 'all 0.4s ease';
+  }
+});
+
+const closePasarela = document.querySelector('.close-pasarela');
+closePasarela.addEventListener('click', () => {
+  const closePago = document.querySelector('#box-pasarela-pago');
+  closePago.classList.toggle('open-pago');
+  if (closePago.classList.contains('open-pago')) {
+  } else {
+    closePago.style.transform = 'translate(-100%, 0)';
+  }
+});
 
 //AÑADIR AL  CARRITO
 const count = () => {
